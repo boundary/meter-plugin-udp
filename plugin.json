@@ -1,0 +1,54 @@
+{
+   "name": "Example Meter Plugin in C",
+   "version": "1.0.0",
+   "meterVersionRequired": "4.2.0-611",
+   "unsupportedPlatforms": [],
+   "tags" : ["example", "c", "udp"],
+   "description": "Example plugin that shows how to write a meter plugin in C to extract data from a UDP listening port",
+   "icon": "icon.png",
+   "command": "./plugin",
+   "postExtract": "",
+   "metrics": [
+       "EXAMPLE_COUNT"
+    ],
+   "dashboards": [
+      {
+        "name": "Example Count",
+        "layout": "d-w=1&d-h=1&d-pad=5&d-light=0&d-bg=none&d-g-EXAMPLE_COUNT=0-0-1-1"
+      }
+    ],
+   "paramSchema": [
+     {
+       "title": "Host",
+       "name": "host",
+       "description": "Host to contact to get count",
+       "type": "string",
+       "default": "localhost",
+       "required": true
+     },
+     {
+       "title": "Port",
+       "name": "port",
+       "description": "Port on host to contact to get count",
+       "type": "int",
+       "default": 8012,
+       "required": true
+     },
+     {
+       "title": "Source",
+       "name": "source",
+       "description": "Source to use for measurements",
+       "type": "string",
+       "default": "Example",
+       "required": true
+     },
+     {
+       "title": "Interval",
+       "name": "interval",
+       "description": "How often to send measurement in seconds",
+       "type": "int",
+       "default": "5",
+       "required": true
+     }
+   ]
+}
