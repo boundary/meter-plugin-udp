@@ -13,11 +13,6 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 
-bin_PROGRAMS = random
-random_CFLAGS = -I$(top_srcdir)/include
-random_SOURCES = random.c 
-random_LDADD = ../../lib/libmeterplugin.la
-AM_LDFLAGS = -lm -ljansson
-
-run:
-	./random
+bin_PROGRAMS = udp
+udp_SOURCES = src/udp.c
+AM_LDFLAGS = -lm -ljansson -lmeterplugin
