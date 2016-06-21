@@ -67,10 +67,9 @@ plugin_result_t udp_get_measurement(collector_t *collector, double *measurement)
     plugin_result_t result = PLUGIN_SUCCEED;
     char response[1024];
     udp_collector_data_t *data = collector->data;
-    fprintf(stderr, "request: %s\n", data->request);
 
     // Send the request
-    int n = sendto(data->sockfd, data->request, strlen(data->request)+1, 0,
+    int n = sendto(data->sockfd, data->request, strlen(data->request), 0,
                    (struct sockaddr *) &data->serveraddr, data->serverlen);
     if (n < 0) {
         fprintf(stderr, "Error sending request");
@@ -84,7 +83,6 @@ plugin_result_t udp_get_measurement(collector_t *collector, double *measurement)
             result = PLUGIN_FAIL;;
             fprintf(stderr, "Error receiving response");
         } else {
-            fprintf(stderr, "response: %s\n", response);
             sscanf(response, "%lf", measurement);
         }
 
