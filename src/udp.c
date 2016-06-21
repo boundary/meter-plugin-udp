@@ -70,7 +70,7 @@ plugin_result_t udp_get_measurement(collector_t *collector, double *measurement)
     fprintf(stderr, "request: %s\n", data->request);
 
     // Send the request
-    int n = sendto(data->sockfd, data->request, strlen(data->request), 0,
+    int n = sendto(data->sockfd, data->request, strlen(data->request)+1, 0,
                    (struct sockaddr *) &data->serveraddr, data->serverlen);
     if (n < 0) {
         fprintf(stderr, "Error sending request");
@@ -84,7 +84,6 @@ plugin_result_t udp_get_measurement(collector_t *collector, double *measurement)
             result = PLUGIN_FAIL;;
             fprintf(stderr, "Error receiving response");
         } else {
-            fprintf(stderr, "scan measurement\n");
             fprintf(stderr, "response: %s\n", response);
             sscanf(response, "%lf", measurement);
         }
@@ -173,10 +172,8 @@ plugin_result_t udp_plugin_collector_initialize(meter_plugin_t *plugin, collecto
     const char *source = parameter_get_string(item, PLUGIN_PARAM_SOURCE);
     strcpy(data->source, source);
 
-    fprintf(stderr, "metric: %s\n", data->metric);
     char *s = strstr(data->metric, "_");
     s++;
-    fprintf(stderr, "s: %s\n", s);
     strcpy(data->request, s);
 
     // Assign the random collector data to the collector
