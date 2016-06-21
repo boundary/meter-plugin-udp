@@ -1,21 +1,31 @@
 {
   "items": [
     {
-      "min": 0,
-      "max": 9,
-      "source": "red",
+      "host": "127.0.0.1",
+      "port": 12345,
+      "metric": "EXAMPLE_BYTE_COUNT",
+      "source": "byte_count",
       "interval": 5
     },
     {
-      "min": 0,
-      "max": 99,
-      "source": "green",
+      "host": "127.0.0.1",
+      "port": 12345,
+      "metric": "EXAMPLE_DURATION",
+      "source": "duration",
       "interval": 5
     },
     {
-      "min": 0,
-      "max": 999,
-      "source": "blue",
+      "host": "127.0.0.1",
+      "port": 12345,
+      "metric": "EXAMPLE_NUMBER",
+      "source": "number",
+      "interval": 5
+    },
+    {
+      "host": "127.0.0.1",
+      "port": 12345,
+      "metric": "EXAMPLE_PERCENT",
+      "source": "percent",
       "interval": 5
     }
   ],
