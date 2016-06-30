@@ -1,6 +1,6 @@
 {
    "name": "Example Meter Plugin in C",
-   "version": "1.0.0",
+   "version": "1.0.1",
    "meterVersionRequired": "4.2.0-611",
    "unsupportedPlatforms": [],
    "tags" : ["example", "c", "udp"],

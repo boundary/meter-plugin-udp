@@ -14,7 +14,7 @@
 #  limitations under the License.
 
 AC_PREREQ([2.64])
-AC_INIT([meter-plugin-udp], [1.0.0])
+AC_INIT([meter-plugin-udp], [1.0.1])
 AM_INIT_AUTOMAKE([ -Wall -Werror subdir-objects foreign])
 AC_CONFIG_HEADERS([config.h])
 AC_PROG_CC_C99
