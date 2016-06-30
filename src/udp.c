@@ -163,13 +163,15 @@ plugin_result_t udp_plugin_collector_initialize(meter_plugin_t *plugin, collecto
     // Get the parameters for this collector
     strcpy(data->host, parameter_get_string(item, PLUGIN_PARAM_HOST));
     data->port = parameter_get_integer(item, PLUGIN_PARAM_PORT);
-    strcpy(data->metric, parameter_get_string(item, PLUGIN_PARAM_METRIC));
     data->interval = parameter_get_integer(item, PLUGIN_PARAM_INTERVAL);
     const char *source = parameter_get_string(item, PLUGIN_PARAM_SOURCE);
     strcpy(data->source, source);
 
+    // Copy the request
+    strcpy(data->request, parameter_get_string(item, PLUGIN_PARAM_METRIC));
+
     // Copy the metric which becomes the request
-    strcpy(data->request, data->metric);
+    sprintf(data->metric, "EXAMPLE_%s", parameter_get_string(item, PLUGIN_PARAM_METRIC));
 
     // Assign the random collector data to the collector
     collector->data = data;
