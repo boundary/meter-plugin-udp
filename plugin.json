@@ -5,7 +5,7 @@
    "unsupportedPlatforms": [],
    "tags" : ["example", "c", "udp"],
    "description": "Example plugin that shows how to write a meter plugin in C to extract data from a UDP listening port",
-   "icon": "icon.png",
+   "icon": "udp.png",
    "command": "/usr/local/bin/plugin-udp",
    "postExtract": "",
    "metrics": [
@@ -24,7 +24,7 @@
      {
        "title": "Host",
        "name": "host",
-       "description": "Host to contact to get count",
+       "description": "Host to contact to get measurements",
        "type": "string",
        "default": "localhost",
        "required": true
@@ -32,7 +32,7 @@
      {
        "title": "Port",
        "name": "port",
-       "description": "Port on host to contact to get count",
+       "description": "Port on host to contact to get measurements",
        "type": "integer",
        "default": 8012,
        "required": true
