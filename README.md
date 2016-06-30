@@ -30,7 +30,7 @@ be installed on the same host where the plugin is running.
 1. Download plugin distribution to the target platform:
 
     ```bash
-    $ wget https://github.com/boundary/meter-plugin-random-c/releases/download/v1.0.0/meter-plugin-udp-1.0.0.tar.gz
+    $ wget https://github.com/boundary/meter-plugin-udp/releases/download/v1.0.0/meter-plugin-udp-1.0.0.tar.gz
     ```
 2. Extract distribution:
 
