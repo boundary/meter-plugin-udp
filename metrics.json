@@ -1,9 +1,30 @@
 {
   "EXAMPLE_BYTECOUNT": {
-    "description": "A metric used to track counts of bytes",
+    "description": "A metric to track counts of bytes",
     "displayName": "Example Bytecount",
     "displayNameShort": "Ex. Bytecount",
     "unit": "bytecount",
+    "defaultAggregate": "avg"
+  },
+  "EXAMPLE_DURATION": {
+    "description": "A metric to track a duration of time",
+    "displayName": "Example Duration",
+    "displayNameShort": "Ex. Duration",
+    "unit": "duration",
+    "defaultAggregate": "avg"
+  },
+  "EXAMPLE_NUMBER": {
+    "description": "A metric to track a number value",
+    "displayName": "Example Number",
+    "displayNameShort": "Ex. Number",
+    "unit": "number",
+    "defaultAggregate": "avg"
+  },
+  "EXAMPLE_PERCENT": {
+    "description": "A metric to track a percentage value",
+    "displayName": "Example Percent",
+    "displayNameShort": "Ex. Percent",
+    "unit": "percent",
     "defaultAggregate": "avg"
   }
 }

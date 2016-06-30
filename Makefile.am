@@ -13,6 +13,6 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 
-bin_PROGRAMS = udp
-udp_SOURCES = src/udp.c
+bin_PROGRAMS = plugin-udp
+plugin_udp_SOURCES = src/udp.c
 AM_LDFLAGS = -lm -ljansson -lmeterplugin

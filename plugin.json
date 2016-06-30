@@ -6,10 +6,13 @@
    "tags" : ["example", "c", "udp"],
    "description": "Example plugin that shows how to write a meter plugin in C to extract data from a UDP listening port",
    "icon": "icon.png",
-   "command": "./plugin",
+   "command": "/usr/local/bin/plugin-udp",
    "postExtract": "",
    "metrics": [
-       "EXAMPLE_COUNT"
+     "EXAMPLE_BYTECOUNT",
+     "EXAMPLE_DURATION",
+     "EXAMPLE_NUMBER",
+     "EXAMPLE_PERCENT"
     ],
    "dashboards": [
       {
@@ -30,7 +33,7 @@
        "title": "Port",
        "name": "port",
        "description": "Port on host to contact to get count",
-       "type": "int",
+       "type": "integer",
        "default": 8012,
        "required": true
      },
@@ -46,8 +49,8 @@
        "title": "Interval",
        "name": "interval",
        "description": "How often to send measurement in seconds",
-       "type": "int",
-       "default": "5",
+       "type": "integer",
+       "default": 5,
        "required": true
      }
    ]
