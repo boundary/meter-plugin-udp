@@ -5,7 +5,7 @@
    "unsupportedPlatforms": [],
    "tags" : ["example", "c", "udp"],
    "description": "Example plugin that shows how to write a meter plugin in C to extract data from a UDP listening port",
-   "icon": "icon.png",
+   "icon": "udp.png",
    "command": "/usr/local/bin/plugin-udp",
    "postExtract": "",
    "metrics": [
