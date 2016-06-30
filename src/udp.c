@@ -26,7 +26,6 @@
 #include <netinet/in.h>
 #include <netdb.h>
 
-
 #define PLUGIN_PARAM_HOST "host"
 #define PLUGIN_PARAM_PORT "port"
 #define PLUGIN_PARAM_METRIC "metric"
@@ -35,7 +34,6 @@
 
 // Define a type to store hostname information
 typedef char hostname_t[_POSIX_HOST_NAME_MAX + 1];
-
 
 // Collector specific data for Random Collector
 struct udp_collector_data {
@@ -211,10 +209,6 @@ plugin_result_t udp_plugin_parameters(meter_plugin_t *plugin) {
 
     return result;
 }
-
-
-
-
 
 /** \brief Plugin main() entry point
  *
