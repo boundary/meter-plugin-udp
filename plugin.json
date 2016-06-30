@@ -20,6 +20,12 @@
         "layout": "d-w=1&d-h=1&d-pad=5&d-light=0&d-bg=none&d-g-EXAMPLE_COUNT=0-0-1-1"
       }
     ],
+    "paramArray": {
+        "itemTitle": [
+          "source"
+        ],
+        "schemaTitle": "UDP Instance"
+    },
    "paramSchema": [
      {
        "title": "Host",
