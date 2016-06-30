@@ -168,9 +168,8 @@ plugin_result_t udp_plugin_collector_initialize(meter_plugin_t *plugin, collecto
     const char *source = parameter_get_string(item, PLUGIN_PARAM_SOURCE);
     strcpy(data->source, source);
 
-    char *s = strstr(data->metric, "_");
-    s++;
-    strcpy(data->request, s);
+    // Copy the metric which becomes the request
+    strcpy(data->request, data->metric);
 
     // Assign the random collector data to the collector
     collector->data = data;
