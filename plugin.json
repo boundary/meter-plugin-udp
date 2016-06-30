@@ -44,6 +44,14 @@
        "required": true
      },
      {
+       "title": "Metric",
+       "name": "metric",
+       "description": "Metric to use to query for measurements",
+       "type": "string",
+       "default": "BYTECOUNT",
+       "required": true
+     },
+     {
        "title": "Source",
        "name": "source",
        "description": "Source to use for measurements",
